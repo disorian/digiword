@@ -3,10 +3,6 @@ using DigiWord.UI.Process.ViewModels;
 using DigiWord.UI.Web.Controllers;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace DigiWord.UI.Web.Test
@@ -22,6 +18,16 @@ namespace DigiWord.UI.Web.Test
             var result = controller.Index() as ViewResult;
 
             Assert.AreEqual("Index", result.ViewName);
+        }
+
+        [Test]
+        public void AboutGetTest()
+        {
+            var controller = new HomeController();
+
+            var result = controller.About() as ViewResult;
+
+            Assert.AreEqual("About", result.ViewName);
         }
 
         [Test]

@@ -2,9 +2,6 @@
 using DigiWord.UI.Process;
 using DigiWord.UI.Process.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DigiWord.UI.Web.Controllers
@@ -35,7 +32,7 @@ namespace DigiWord.UI.Web.Controllers
 
         public ActionResult About()
         {
-            return View();
+            return View("About");
         }
         
     }
