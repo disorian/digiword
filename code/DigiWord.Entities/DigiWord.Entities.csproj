@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{069C1716-CA03-40C4-94C1-ED8619E82FD0}</ProjectGuid>
+    <ProjectGuid>{E3C5B498-DFE9-4817-A083-09305B82298F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DigiWord.Business</RootNamespace>
-    <AssemblyName>DigiWord.Business</AssemblyName>
+    <RootNamespace>DigiWord.Entities</RootNamespace>
+    <AssemblyName>DigiWord.Entities</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,16 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\NumberConverter.cs" />
-    <Compile Include="ConverterComponent.cs" />
-    <Compile Include="Extensions\NumberConverterExtension.cs" />
+    <Compile Include="NumberDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DigiWord.Entities\DigiWord.Entities.csproj">
-      <Project>{e3c5b498-dfe9-4817-a083-09305b82298f}</Project>
-      <Name>DigiWord.Entities</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

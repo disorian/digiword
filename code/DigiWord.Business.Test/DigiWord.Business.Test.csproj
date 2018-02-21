@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConverterComponentTest.cs" />
+    <Compile Include="NumberConverterExtensionTest.cs" />
+    <Compile Include="NumberConverterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +55,10 @@
     <ProjectReference Include="..\DigiWord.Business\DigiWord.Business.csproj">
       <Project>{069c1716-ca03-40c4-94c1-ed8619e82fd0}</Project>
       <Name>DigiWord.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DigiWord.Entities\DigiWord.Entities.csproj">
+      <Project>{e3c5b498-dfe9-4817-a083-09305b82298f}</Project>
+      <Name>DigiWord.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
