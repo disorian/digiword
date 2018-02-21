@@ -34,6 +34,7 @@ namespace DigiWord.Business.Test
             Assert.AreNotEqual(numberDetail.Id, Guid.Empty);
             Assert.AreEqual(numberDetail.DateCreated.Date, DateTime.UtcNow.Date);
             Assert.IsFalse(string.IsNullOrWhiteSpace(numberDetail.ConvertedNumber));
+            Assert.IsFalse(string.IsNullOrWhiteSpace(numberDetail.Name));
             Assert.AreEqual(expected, numberDetail.ConvertedNumber);
         }
     }
