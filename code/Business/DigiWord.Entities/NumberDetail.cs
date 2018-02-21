@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
@@ -33,11 +34,14 @@ namespace DigiWord.Entities
         /// Holds the textual representation if the number.
         /// </summary>
         [DataMember]
+        [DisplayName("Converted Number")]
         public string ConvertedNumber { get; set; }
 
         /// <summary>
         /// A Date-time when the record has been created
         /// </summary>
+        [DataMember]
+        [DisplayName("Created on")]
         public DateTime DateCreated { get; } = DateTime.UtcNow;
 
         public override string ToString() =>
