@@ -1,16 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DigiWord.UI.Process
 {
+    /// <summary>
+    /// Process base class use to configure common configurations on request headers, etc.
+    /// </summary>
     public class ProcessComponent
     {
+        /// <summary>
+        /// Configures HttpClient properties
+        /// </summary>
+        /// <param name="client">An HttpClient object</param>
         protected static void ConfigureHttpClient(HttpClient client)
         {
             client.BaseAddress = new Uri(ConfigurationManager.AppSettings["serviceUrl"]);

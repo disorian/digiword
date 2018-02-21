@@ -13,11 +13,18 @@ namespace DigiWord.Business
     /// </summary>
     public class ConverterComponent
     {
+        /// <summary>
+        /// Processes a number detail and converts the number to its textual representation
+        /// </summary>
+        /// <param name="numberDetail"></param>
+        /// <returns></returns>
         public NumberDetail ProccesNumber(NumberDetail numberDetail)
         {
             ulong integer = (ulong)Truncate(numberDetail.Number); // extracts the integer part of the numebr
             ulong decimals = (ulong)((numberDetail.Number - integer) * 100); // extracts the decimals of the number and converts it to integer
 
+            // generates a text for the response
+            // format: [integer] dollar(s) and [decimals] cent(s)
             numberDetail.ConvertedNumber =
                 ($"{integer.ToText()} dollar{(integer > 1 ? "s" : "")}" +
                  $"{(decimals > 0 ? $" and {decimals.ToText()} cent{(decimals > 1 ? "s" : "")}" : "")}");

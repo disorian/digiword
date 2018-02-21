@@ -6,6 +6,9 @@ using System.Web.Mvc;
 
 namespace DigiWord.UI.Web.Controllers
 {
+    /// <summary>
+    /// Home controller which is the entry point for the UI
+    /// </summary>
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -20,6 +23,7 @@ namespace DigiWord.UI.Web.Controllers
             {
                 ConverterProcess process = new ConverterProcess();
 
+                // calls UI process to converts the number
                 NumberDetail result = process.ConvertNumebrDetail(numberDetailViewModel);
 
                 return View("Result", result);
