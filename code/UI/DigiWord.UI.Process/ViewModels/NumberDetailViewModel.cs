@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
-namespace DigiWord.Services.Models
+namespace DigiWord.UI.Process.ViewModels
 {
     /// <summary>
-    /// NumberDetail request data contract
+    /// NumberDetail View Model
     /// </summary>
     [DataContract]
-    public class NumberDetailRequest
+    public class NumberDetailViewModel
     {
         /// <summary>
         /// A string holds the name
@@ -21,7 +21,7 @@ namespace DigiWord.Services.Models
         /// </summary>
         [DataMember]
         [Required]
-        [Range(0, uint.MaxValue, ErrorMessage = "The number should be possitive and less than 18446744073709551614")]
+        [Range(0, ulong.MaxValue, ErrorMessage = "The number should be possitive and less than 18446744073709551615")]
         public decimal Number { get; set; }
     }
 }

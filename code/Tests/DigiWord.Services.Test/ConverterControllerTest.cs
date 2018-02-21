@@ -2,12 +2,8 @@
 using DigiWord.Services.Models;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace DigiWord.Services.Test
@@ -17,7 +13,7 @@ namespace DigiWord.Services.Test
     {
         private ConverterController _converterController;
 
-        [SetUp]
+        [OneTimeSetUp]
         public void Init()
         {
             AutoMapperConfiguration.RegisterMapping();
@@ -32,13 +28,13 @@ namespace DigiWord.Services.Test
         [Test]
         public void ConvertServiceTest()
         {
-            var numberDetali = new NumberDetailRequest
+            var numberDetail = new NumberDetailRequest
             {
                 Name = "Behnam karimi",
                 Number = 3324.39m
             };
 
-            var result = _converterController.Convert(numberDetali) as HttpResponseMessage;
+            var result = _converterController.Convert(numberDetail) as HttpResponseMessage;
 
             result.EnsureSuccessStatusCode();
 
@@ -46,11 +42,25 @@ namespace DigiWord.Services.Test
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.IsNotNull(resultContent);
-            Assert.AreEqual(numberDetali.Name, resultContent.Name);
-            Assert.AreEqual(numberDetali.Number, resultContent.Number);
+            Assert.AreEqual(numberDetail.Name, resultContent.Name);
+            Assert.AreEqual(numberDetail.Number, resultContent.Number);
             Assert.AreEqual("three thousand and three hundred and twenty-four dollars and thirty-nine cents", resultContent.ConvertedNumber);
             Assert.AreEqual(DateTime.UtcNow.Date, resultContent.DateCreated.Date);
             Assert.AreNotEqual(Guid.Empty, resultContent.Id);
+        }
+
+        [Test]
+        public void ConvertService_NaegativeNumber_ExceptionShouldReturn()
+        {
+            var numberDetail = new NumberDetailRequest
+            {
+                Name = "Behnam karimi",
+                Number = -3324.39m
+            };
+
+            var result = _converterController.Convert(numberDetail) as HttpResponseMessage;
+
+            var exception = Assert.Throws<HttpRequestException>(() => result.EnsureSuccessStatusCode());
         }
     }
 }
