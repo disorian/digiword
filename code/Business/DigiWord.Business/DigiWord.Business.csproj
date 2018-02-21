@@ -40,8 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\NumberConverter.cs" />
     <Compile Include="ConverterComponent.cs" />
+    <Compile Include="Extensions\NumberConverterExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DigiWord.Entities\DigiWord.Entities.csproj">
+      <Project>{e3c5b498-dfe9-4817-a083-09305b82298f}</Project>
+      <Name>DigiWord.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

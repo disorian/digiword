@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using static System.Math;
 
-namespace DigiWord.Business
+namespace DigiWord.Business.Common
 {
     /// <summary>
     /// Coneverter Component class. It converts a number to its textual representation
     /// </summary>
-    public class ConverterComponent
+    public class NumberConverter
     {
         private readonly Dictionary<int, string> _numbers;
         private readonly List<string> _ranks;
 
         /// <summary>
-        /// 
+        /// Initiate a Number converter
         /// </summary>
-        public ConverterComponent()
+        public NumberConverter()
         {
             _numbers = InitNumbersCollection();
             _ranks = InitRankingCollection();
@@ -28,7 +28,7 @@ namespace DigiWord.Business
         /// </summary>
         /// <param name="number">An integer holds a number to be converted</param>
         /// <returns>A string holds the textual representation of the given number</returns>
-        protected string Convert(ulong number)
+        public string Convert(ulong number)
         {
             if (number == 0)
                 return "zero";
@@ -69,6 +69,7 @@ namespace DigiWord.Business
         /// </summary>
         /// <param name="number">An integer between 0 to 999 holds a number to be converted</param>
         /// <returns>A string holds the textual representation of the given number</returns>
+        /// <exception cref="ArgumentException">When the number is less than 0 or more than 999.</exception>
         protected string ConvertGroup(int number)
         {
             if (number == 0)
@@ -105,7 +106,7 @@ namespace DigiWord.Business
 
                         if (digit == 1) // resets the remaining to 0 if it is less than 20 and ends the lookup 
                             remaining = 0;
-                        else if(remaining > 0) // appends '-' for numbers more than 20 when first number is more than 0
+                        else if (remaining > 0) // appends '-' for numbers more than 20 when first number is more than 0
                             sb.Append("-");
 
                         break;
