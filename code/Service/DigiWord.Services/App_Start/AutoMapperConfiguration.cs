@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using DigiWord.Entities;
-using DigiWord.Services.Contract;
+using DigiWord.Services.Models;
 
-namespace DigiWord.Services.Configurations
+namespace DigiWord.Services
 {
     public static class AutoMapperConfiguration
     {
