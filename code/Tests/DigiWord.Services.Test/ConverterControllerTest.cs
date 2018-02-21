@@ -32,13 +32,13 @@ namespace DigiWord.Services.Test
         [Test]
         public void ConvertServiceTest()
         {
-            var numberDetali = new NumberDetailRequest
+            var numberDetail = new NumberDetailRequest
             {
                 Name = "Behnam karimi",
                 Number = 3324.39m
             };
 
-            var result = _converterController.Convert(numberDetali) as HttpResponseMessage;
+            var result = _converterController.Convert(numberDetail) as HttpResponseMessage;
 
             result.EnsureSuccessStatusCode();
 
@@ -46,8 +46,8 @@ namespace DigiWord.Services.Test
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.IsNotNull(resultContent);
-            Assert.AreEqual(numberDetali.Name, resultContent.Name);
-            Assert.AreEqual(numberDetali.Number, resultContent.Number);
+            Assert.AreEqual(numberDetail.Name, resultContent.Name);
+            Assert.AreEqual(numberDetail.Number, resultContent.Number);
             Assert.AreEqual("three thousand and three hundred and twenty-four dollars and thirty-nine cents", resultContent.ConvertedNumber);
             Assert.AreEqual(DateTime.UtcNow.Date, resultContent.DateCreated.Date);
             Assert.AreNotEqual(Guid.Empty, resultContent.Id);
