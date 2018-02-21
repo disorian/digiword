@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.UI.Process.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.UI.Web", "UI\DigiWord.UI.Web\DigiWord.UI.Web.csproj", "{611B4B6C-9EB8-4EE7-BA37-835A4BCCE40E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.UI.Web.Test", "Tests\DigiWord.UI.Web.Test\DigiWord.UI.Web.Test.csproj", "{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{611B4B6C-9EB8-4EE7-BA37-835A4BCCE40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{611B4B6C-9EB8-4EE7-BA37-835A4BCCE40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{611B4B6C-9EB8-4EE7-BA37-835A4BCCE40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +84,7 @@ Global
 		{B6CE5865-A3FF-4A81-BCF2-0146ACB6DA2D} = {EED85D3F-F8E0-47BD-9EDC-E59E450009C5}
 		{45B66EE5-86C9-4091-A85A-15BF3C8D97A9} = {90390524-E2CE-42E1-B548-1BA45931CF74}
 		{611B4B6C-9EB8-4EE7-BA37-835A4BCCE40E} = {EED85D3F-F8E0-47BD-9EDC-E59E450009C5}
+		{D515CC6C-A77F-41B8-A2AC-4F2F7345AE76} = {90390524-E2CE-42E1-B548-1BA45931CF74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2BEDB56-F455-4A53-AC2D-D5DCEAFB3186}
