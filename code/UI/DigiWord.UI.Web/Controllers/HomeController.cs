@@ -30,7 +30,8 @@ namespace DigiWord.UI.Web.Controllers
             }
             catch(Exception)
             {
-                return View();
+                ModelState.AddModelError("Number", "Unable to process the request.");
+                return View("Index");
             }
         }
 

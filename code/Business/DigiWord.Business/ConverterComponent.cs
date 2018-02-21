@@ -20,6 +20,9 @@ namespace DigiWord.Business
         /// <returns></returns>
         public NumberDetail ProccesNumber(NumberDetail numberDetail)
         {
+            if (numberDetail.Number < 0)
+                throw new ArgumentException("The number should be positive.");
+
             ulong integer = (ulong)Truncate(numberDetail.Number); // extracts the integer part of the numebr
             ulong decimals = (ulong)((numberDetail.Number - integer) * 100); // extracts the decimals of the number and converts it to integer
 

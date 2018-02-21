@@ -28,6 +28,7 @@ namespace DigiWord.Entities
         /// </summary>
         [DataMember]
         [Required]
+        [Range(0, uint.MaxValue, ErrorMessage = "The number should be possitive")]
         public decimal Number { get; set; }
 
         /// <summary>

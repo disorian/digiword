@@ -3,6 +3,7 @@ using DigiWord.UI.Process.ViewModels;
 using DigiWord.UI.Web.Controllers;
 using NUnit.Framework;
 using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace DigiWord.UI.Web.Test
@@ -52,6 +53,24 @@ namespace DigiWord.UI.Web.Test
             Assert.AreEqual("two hundred and one dollars and ten cents", result.ConvertedNumber);
             Assert.AreEqual(DateTime.UtcNow.Date, result.DateCreated.Date);
             Assert.AreNotEqual(Guid.Empty, result.Id);
+        }
+
+        [Test]
+        public void IndexPost_NegativeNumber_ErrorReturns()
+        {
+            var controller = new HomeController();
+            var detail = new NumberDetailViewModel
+            {
+                Name = "Behnam",
+                Number = -201.10m
+            };
+
+            var view = controller.Index(detail) as ViewResult;
+
+            Assert.AreEqual("Index", view.ViewName);
+            Assert.True(view.ViewData.ModelState.Keys.Contains("Number"));
+            Assert.AreEqual("Unable to process the request.", view.ViewData.ModelState["Number"].Errors[0].ErrorMessage);
+
         }
     }
 }

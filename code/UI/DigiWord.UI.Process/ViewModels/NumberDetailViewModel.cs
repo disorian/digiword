@@ -21,6 +21,7 @@ namespace DigiWord.UI.Process.ViewModels
         /// </summary>
         [DataMember]
         [Required]
+        [Range(0, ulong.MaxValue, ErrorMessage = "The number should be possitive and less than 18446744073709551615")]
         public decimal Number { get; set; }
     }
 }

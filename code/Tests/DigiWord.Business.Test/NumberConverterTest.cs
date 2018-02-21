@@ -58,7 +58,7 @@ namespace DigiWord.Business.Test
             var bc = new ConverterWrapper();
 
             var exception = Assert.Throws<ArgumentException>(() => bc.ConvertGroupWrapper(number));
-            Assert.AreEqual(exception.Message, "A group should be positive and it cannot be more than 999");
+            Assert.AreEqual("A group should be positive and it cannot be more than 999", exception.Message);
         }
     }
 

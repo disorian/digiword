@@ -37,5 +37,20 @@ namespace DigiWord.Business.Test
             Assert.IsFalse(string.IsNullOrWhiteSpace(numberDetail.Name));
             Assert.AreEqual(expected, numberDetail.ConvertedNumber);
         }
+
+        [Test]
+        public void ProcessNumber_NegativeNumber_ReturnException()
+        {
+            var numberDetail = new NumberDetail
+            {
+                Name = "Behnam Karimi",
+                Number = -100.12m
+            };
+
+            var bc = new ConverterComponent();
+
+            var exception = Assert.Throws<ArgumentException>(() => bc.ProccesNumber(numberDetail));
+            Assert.AreEqual("The number should be positive.", exception.Message);
+        }
     }
 }

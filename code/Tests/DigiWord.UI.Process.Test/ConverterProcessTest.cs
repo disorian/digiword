@@ -32,5 +32,18 @@ namespace DigiWord.UI.Process.Test
             Assert.AreEqual(DateTime.UtcNow.Date, result.DateCreated.Date);
             Assert.AreNotEqual(Guid.Empty, result.Id);
         }
+
+        [Test]
+        public void ConvertNumebrDetail_NegativeValue_ShoudReturnException()
+        {
+            var process = new ConverterProcess();
+            var detail = new NumberDetailViewModel
+            {
+                Name = "Behnam Karimi",
+                Number = -101.11m
+            };
+
+            Assert.Throws<ApplicationException>(() => process.ConvertNumebrDetail(detail));
+        }
     }
 }
