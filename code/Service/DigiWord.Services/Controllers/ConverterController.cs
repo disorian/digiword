@@ -16,13 +16,6 @@ namespace DigiWord.Services
     [RoutePrefix("api/converter")]
     public class ConverterController : ApiController
     {
-        [HttpGet]
-        [Route("test")]
-        public HttpResponseMessage Test()
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, "Service is up");
-        }
-
         [HttpPost]
         [Route("convert")]
         public HttpResponseMessage Convert(NumberDetailRequest request)

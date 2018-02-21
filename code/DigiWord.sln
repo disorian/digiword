@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{7793
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Services", "Service\DigiWord.Services\DigiWord.Services.csproj", "{B37489A4-FD71-45A8-B245-342AF6FF6E54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Services.Test", "Tests\DigiWord.Services.Test\DigiWord.Services.Test.csproj", "{122C1F18-3337-42DF-89F0-178CF3C7425D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B37489A4-FD71-45A8-B245-342AF6FF6E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B37489A4-FD71-45A8-B245-342AF6FF6E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B37489A4-FD71-45A8-B245-342AF6FF6E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122C1F18-3337-42DF-89F0-178CF3C7425D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122C1F18-3337-42DF-89F0-178CF3C7425D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122C1F18-3337-42DF-89F0-178CF3C7425D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122C1F18-3337-42DF-89F0-178CF3C7425D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{5DD6FD38-164A-474A-88D4-79B263A0F168} = {90390524-E2CE-42E1-B548-1BA45931CF74}
 		{E3C5B498-DFE9-4817-A083-09305B82298F} = {83CB69AF-C9F9-44B3-9C1B-EE4FD27B389A}
 		{B37489A4-FD71-45A8-B245-342AF6FF6E54} = {7793597E-8A3B-43E8-B09D-CF2141C24AB4}
+		{122C1F18-3337-42DF-89F0-178CF3C7425D} = {90390524-E2CE-42E1-B548-1BA45931CF74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2BEDB56-F455-4A53-AC2D-D5DCEAFB3186}
