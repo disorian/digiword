@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Business", "DigiWord.Business\DigiWord.Business.csproj", "{069C1716-CA03-40C4-94C1-ED8619E82FD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Business", "Business\DigiWord.Business\DigiWord.Business.csproj", "{069C1716-CA03-40C4-94C1-ED8619E82FD0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{90390524-E2CE-42E1-B548-1BA45931CF74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Business.Test", "DigiWord.Business.Test\DigiWord.Business.Test.csproj", "{5DD6FD38-164A-474A-88D4-79B263A0F168}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Business.Test", "Tests\DigiWord.Business.Test\DigiWord.Business.Test.csproj", "{5DD6FD38-164A-474A-88D4-79B263A0F168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Entities", "DigiWord.Entities\DigiWord.Entities.csproj", "{E3C5B498-DFE9-4817-A083-09305B82298F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiWord.Entities", "Business\DigiWord.Entities\DigiWord.Entities.csproj", "{E3C5B498-DFE9-4817-A083-09305B82298F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{83CB69AF-C9F9-44B3-9C1B-EE4FD27B389A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,7 +36,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{069C1716-CA03-40C4-94C1-ED8619E82FD0} = {83CB69AF-C9F9-44B3-9C1B-EE4FD27B389A}
 		{5DD6FD38-164A-474A-88D4-79B263A0F168} = {90390524-E2CE-42E1-B548-1BA45931CF74}
+		{E3C5B498-DFE9-4817-A083-09305B82298F} = {83CB69AF-C9F9-44B3-9C1B-EE4FD27B389A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2BEDB56-F455-4A53-AC2D-D5DCEAFB3186}

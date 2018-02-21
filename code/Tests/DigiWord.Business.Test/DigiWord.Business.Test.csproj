@@ -52,11 +52,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DigiWord.Business\DigiWord.Business.csproj">
+    <ProjectReference Include="..\..\Business\DigiWord.Business\DigiWord.Business.csproj">
       <Project>{069c1716-ca03-40c4-94c1-ed8619e82fd0}</Project>
       <Name>DigiWord.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DigiWord.Entities\DigiWord.Entities.csproj">
+    <ProjectReference Include="..\..\Business\DigiWord.Entities\DigiWord.Entities.csproj">
       <Project>{e3c5b498-dfe9-4817-a083-09305b82298f}</Project>
       <Name>DigiWord.Entities</Name>
     </ProjectReference>
