@@ -3,12 +3,8 @@ using DigiWord.Business;
 using DigiWord.Entities;
 using DigiWord.Services.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace DigiWord.Services
@@ -16,6 +12,11 @@ namespace DigiWord.Services
     [RoutePrefix("api/converter")]
     public class ConverterController : ApiController
     {
+        /// <summary>
+        /// Converts a number to its textual representation
+        /// </summary>
+        /// <param name="request">Number detail requst</param>
+        /// <returns>A number detail with converted text.</returns>
         [HttpPost]
         [Route("convert")]
         public HttpResponseMessage Convert(NumberDetailRequest request)
